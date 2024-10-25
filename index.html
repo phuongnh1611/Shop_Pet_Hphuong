@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Bán Thú Cưng</title>
+    <link rel="stylesheet" href="css/c1.css">
+</head>
+<body>
+<div class="container">
+    <header id="header">
+        <img src="images/logo.png" alt="Logo" id="logo" style="max-width: 100px;"> 
+        <h1>Thế Giới Thú Cưng</h1>
+        <p>Chúng tôi cung cấp các giống chó thuần chủng và thức ăn, phụ kiện cao cấp</p>
+    </header>
+
+    <nav id="menu">
+        <a href="#top">Trang chủ</a>
+        <a href="#listcho">Các loài chó</a>
+        <a href="#listthucan">Thức ăn cho chó</a>
+        <a href="#listphukien">Phụ kiện</a>
+        <a href="#news">Tin tức</a>
+    </nav>
+
+    <main>
+        <section id="listcho">
+            <h2>Các loài chó</h2>
+            <div id="data"></div>
+        </section>
+        
+        <section id="listthucan">
+            <h2>Thức ăn cho chó</h2>
+            <div id="data"></div>
+        </section>
+
+        <section id="listphukien">
+            <h2>Phụ kiện cho chó</h2>
+            <div id="data"></div>
+        </section>
+
+        <section id="news">
+            <h2>Tin tức</h2>
+            <div id="data"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Cửa Hàng Thú Cưng Pokemon</p>
+    </footer>
+</div>
+
+<script type="module">
+    import { showListCho, showListThucAn, showListPhuKien, showNews } from './js/app.js';
+    document.querySelector("#listcho #data").innerHTML = showListCho();
+    document.querySelector("#listthucan #data").innerHTML = showListThucAn();
+    document.querySelector("#listphukien #data").innerHTML = showListPhuKien();
+    document.querySelector("#news #data").innerHTML = showNews();
+</script>
+</body>
+</html>
